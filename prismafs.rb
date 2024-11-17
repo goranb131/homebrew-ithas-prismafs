@@ -5,8 +5,6 @@ class Prismafs < Formula
   sha256 "4a1e89d4dbd49b0e8d6d1374911985d2b5e53ab15f55d35d26a098caa473ebd6"
   license "Apache-2.0"
 
-  depends_on cask: "macfuse"
-
   def install
     system "make", "CC=clang"
     bin.install "prismafs"
