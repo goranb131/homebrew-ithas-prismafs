@@ -6,6 +6,12 @@ class Prismafs < Formula
   license "Apache-2.0"
 
   def install
+    # macFUSE is in /usr/local, outside homebrew on Apple Silicon.
+    # Homebrew compiler strips -I/usr/local/include & -L/usr/local/lib,
+    # so using CPATH/LIBRARY_PATH 
+    ENV.prepend_path "CPATH", "/usr/local/include"
+    ENV.prepend_path "LIBRARY_PATH", "/usr/local/lib"
+
     system "make", "install", "BINDIR=#{bin}", "MANDIR=#{man1}"
   end
 
