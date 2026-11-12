@@ -2,7 +2,7 @@ class Prismafs < Formula
   desc "A lightweight, layered userspace filesystem inspired by Plan 9"
   homepage "http://ithas-site.com"
   url "https://github.com/goranb131/ITHAS-prismaFS/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "REPLACE_WITH_SHA256_OF_v1.9.0_TARBALL"
+  sha256 "2c0f8d3f678ff3b86d3136d7d0e718ddf897beab7f953103fbbad8e11201d26"
   license "Apache-2.0"
 
   depends_on "libsodium"
